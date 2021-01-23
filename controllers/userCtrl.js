@@ -128,6 +128,7 @@ const userCtrl = {
         }
     },
     findUser: async (req, res) => {
+        console.log(req.body)
         const user = await Users.findOne({Id: req.params.Id}).select('-password')
         if(!user) return res.status(400).json({msg: "User does not exixts"})
         res.json(user)

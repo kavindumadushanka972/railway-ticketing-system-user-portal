@@ -23,6 +23,7 @@ function Header() {
         return(
             <>
                 <li class="nav-item"><Link class="nav-link" to="/customer">Customer</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/user">App User</Link></li>
             </>
         )
     }
