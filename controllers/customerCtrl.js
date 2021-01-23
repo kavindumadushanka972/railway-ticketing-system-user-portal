@@ -48,13 +48,19 @@ class APIfeatures {
 const customerCtrl = {
     register: async (req, res) =>{
         try {
-            const {Id, name, address1, address2, address3, phone, balance, deposit} = req.body;
+            const Id = req.body.Id
+            const name = req.body.name
+            const address1 = req.body.address1
+            const address2 = req.body.address2
+            const address3 = req.body.address3
+            const phone = req.body.phone
+            const balance = req.body.deposit
 
             const customer = await Customers.findOne({Id})
             if(customer) return res.status(400).json({msg:'The Id already exists.'})
 
             const newCustomer = new Customers({
-                Id, name, address1, address2, address3, phone,  balance, deposit
+                Id, name, address1, address2, address3, phone,  balance
             })
 
             await newCustomer.save()

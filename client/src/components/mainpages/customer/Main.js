@@ -31,6 +31,21 @@ function Main() {
         getCustomers()
     },[callback, sort, page, Id, city])
 
+    const deleteCustomer = async (id) =>{
+        try{
+            const confirm = window.confirm("Are you sure?")
+            if(confirm){
+                const res = await axios.delete(`/api/customer/${id}`,{
+                    headers: {Authorization: token}
+                })
+                alert(res.data.msg)
+                setCallback(!callback)
+            }
+        }catch(err){
+            alert(err.response.data.msg)
+        }
+    }
+
     if(loading) return <div><Loading /></div>
     return (
         <div>
@@ -57,7 +72,7 @@ function Main() {
                                 <td>{customer.balance}</td>
                                 <td>{customer.address3.toUpperCase()}</td>
                                 <td><Link type="button" class="btn btn-outline-success" to={`/customer/update/${customer.Id}`}>Update</Link></td>
-                                <td><Link type="button" class="btn btn-outline-danger">Delete</Link></td>
+                                <td><Link type="button" class="btn btn-outline-danger" onClick={() => deleteCustomer(customer.Id)}>Delete</Link></td>
                             </tr>
                         ))
                     }
