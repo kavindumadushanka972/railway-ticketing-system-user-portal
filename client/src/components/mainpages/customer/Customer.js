@@ -87,6 +87,7 @@ function Customer() {
     
         <div>
             <form onSubmit={handleSubmit} className="container mt-5 border border-primary rounded p-5">
+            <h3 className="col text-center mb-5">Customer Account</h3>
                 <div className="form-group row justify-content-center align-items-center mr-auto ml-auto">
                     <label htmlFor="Id" class="col-md-2 col-form-label">User ID</label>
                     <input type="text" name="Id" id="Id" required class="col-md-4"

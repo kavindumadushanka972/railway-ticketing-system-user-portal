@@ -10,6 +10,8 @@ import Travels from '../mainpages/Travels/Travels'
 import Main from '../mainpages/customer/Main'
 import Customer from '../mainpages/customer/Customer'
 import User from '../mainpages/User/User'
+import Uncom from '../mainpages/uncomTravel/UncomTravel'
+import Freezed from '../mainpages/uncomTravel/FreezedAccount'
 
 function Pages() {
     const state = useContext(GlobalState)
@@ -29,6 +31,8 @@ function Pages() {
             <Route path="/customer/update/:Id" exact component={isAdmin ? Customer : NotFound} />
             <Route path="/customer/register" exact component={isAdmin ? Customer : NotFound} />
             <Route path="/user" exact component={isAdmin ? User : NotFound} />
+            <Route path="/uncomTravel" exact component={isAdmin ? Uncom : NotFound} />
+            <Route path="/removeFreez" exact component={isAdmin ? Freezed : NotFound} />
             {/* <Route path="/ProductsAll" exact component={ProductsAll} />
             <Route path="/detail/:id" exact component={DetailProduct} />
             <Route path="/category/:id" exact component={Category} />

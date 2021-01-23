@@ -13,6 +13,8 @@ function TravelsAPI(token) {
     const [page, setPage] = useState(1)
     const [result, setResult] = useState(0)
     const [userId, setUserId] = useState('')
+    const [uncom, setUncom] = useState('')
+    const [Id, SetId] = useState('')
 
     useEffect(() =>{
         if(token){
@@ -46,7 +48,9 @@ function TravelsAPI(token) {
         page: [page, setPage],
         result: [result, setResult],
         train: [train, setTrain],
-        userId: [userId, setUserId]
+        userId: [userId, setUserId],
+        uncom: [uncom, setUncom],
+        Id: [Id, SetId]
     }
 }
 
