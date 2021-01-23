@@ -49,11 +49,7 @@ function FreezedAccount() {
     }
 
     const handleStation = e =>{
-        setStationId(e.target.value)
-        // setStationName(e.target.value)
-        // stations.forEach(station =>{
-        //     if(e.target.value === station.Id) setStationName(station.Id)
-        // })    
+        setStationId(e.target.value) 
     }
 
     if(loading) return <div><Loading /></div>
