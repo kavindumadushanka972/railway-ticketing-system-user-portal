@@ -5,7 +5,7 @@ function TravelsAPI(token) {
     const [isLogged, setIsLogged] = useState(false)
     const [isAdmin, setIsAdmin] = useState(false)
     const [travels, setTravels] = useState([])
-    const [callback, setCallback] = useState([])
+    const [callback, setCallback] = useState(false)
     const [sort, setSort] = useState('')
     const [start, setStart] = useState('')
     const [end,setEnd] = useState('')
