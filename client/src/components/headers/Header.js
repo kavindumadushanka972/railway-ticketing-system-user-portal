@@ -27,6 +27,8 @@ function Header() {
                 <li class="nav-item"><Link class="nav-link" to="/uncomTravel">Freezed Account</Link></li>
                 <li class="nav-item"><Link class="nav-link" to="/trains">Trains</Link></li>
                 <li class="nav-item"><Link class="nav-link" to="/stations">Stations</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/increase">Increase Prices</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/decrease">Decrease Prices</Link></li>
             </>
         )
     }

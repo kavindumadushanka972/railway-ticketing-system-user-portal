@@ -97,22 +97,22 @@ function CreatePayment() {
                     <label htmlFor="first" class="col-md-2 col-form-label">First Class</label>
                     <input type="text" name="first" id="first" required class="col-md-4"
                     value={payment.first} onChange={handleChangeInput}  />
-            </div>
+                </div>
 
-            <div className="form-group row justify-content-center align-items-center mr-auto ml-auto">
-                    <label htmlFor="second" class="col-md-2 col-form-label">Second Class</label>
-                    <input type="text" name="second" id="second" required class="col-md-4"
-                    value={payment.second} onChange={handleChangeInput}  />
-            </div>
+                <div className="form-group row justify-content-center align-items-center mr-auto ml-auto">
+                        <label htmlFor="second" class="col-md-2 col-form-label">Second Class</label>
+                        <input type="text" name="second" id="second" required class="col-md-4"
+                        value={payment.second} onChange={handleChangeInput}  />
+                </div>
 
-            <div className="form-group row justify-content-center align-items-center mr-auto ml-auto">
-                    <label htmlFor="third" class="col-md-2 col-form-label">Third Class</label>
-                    <input type="text" name="third" id="third" required class="col-md-4"
-                    value={payment.third} onChange={handleChangeInput}  />
-            </div>
-            <div class="col text-center">
-                <button class="btn btn-success" type="submit">{onEdit? "Update" : "Create"}</button>
-            </div>
+                <div className="form-group row justify-content-center align-items-center mr-auto ml-auto">
+                        <label htmlFor="third" class="col-md-2 col-form-label">Third Class</label>
+                        <input type="text" name="third" id="third" required class="col-md-4"
+                        value={payment.third} onChange={handleChangeInput}  />
+                </div>
+                <div class="col text-center">
+                    <button class="btn btn-success" type="submit">{onEdit? "Update" : "Create"}</button>
+                </div>
             </form>
             }
            
@@ -175,7 +175,7 @@ function CreatePayment() {
             }
             
            
-           
+           <Footer />
         </div>
     )
 }

@@ -18,6 +18,8 @@ import Stations from '../mainpages/stations/Stations'
 import CreateStation from '../mainpages/stations/CreateStation'
 import Payments from '../mainpages/Payment/Payments'
 import CreatePayment from '../mainpages/Payment/CreatePayment'
+import Increase from '../mainpages/ChangePrice/Increase'
+import Decrease from '../mainpages/ChangePrice/Decrease'
 
 function Pages() {
     const state = useContext(GlobalState)
@@ -48,22 +50,8 @@ function Pages() {
             <Route path="/payments" exact component={isLogged ? Payments : NotFound} />
             <Route path="/createPayment" exact component={isAdmin ? CreatePayment : NotFound} />
             <Route path="/createPayment/:Id" exact component={isAdmin ? CreatePayment : NotFound} />
-            {/* <Route path="/ProductsAll" exact component={ProductsAll} />
-            <Route path="/detail/:id" exact component={DetailProduct} />
-            <Route path="/category/:id" exact component={Category} />
-
-            <Route path="/login" exact component={isLogged ? NotFound : Login} />
-            <Route path="/register" exact component={isLogged ? NotFound : Register} />
-
-            <Route path="/category" exact component={isAdmin ? Categories : NotFound} />
-            <Route path="/create_product" exact component={isAdmin ? CreateProduct : NotFound} />
-            <Route path="/edit_product/:id" exact component={isAdmin ? CreateProduct : NotFound} />
-
-            <Route path="/history" exact component={isLogged ? OrderHistory : NotFound} />
-            <Route path="/history/:id" exact component={isLogged ? OrderDetails : NotFound} />
-
-            <Route path="/cart" exact component={Cart} /> */}
-
+            <Route path="/increase" exact component={isAdmin ? Increase : NotFound} />
+            <Route path="/decrease" exact component={isAdmin ? Decrease : NotFound} />
 
             <Route path="*" exact component={NotFound} />
         </Switch>
