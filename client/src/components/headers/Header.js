@@ -35,7 +35,6 @@ function Header() {
         return(
             <>
                 <li class="nav-item"><Link class="nav-link" to="/profile">Profile</Link></li>
-
                 <li class="nav-item"><Link class="nav-link" to="/travels">History</Link></li>
             </>
         )
@@ -43,8 +42,8 @@ function Header() {
 
     const loggedRouter = () =>{
         return(
-            <>
-
+            <>  
+                <li class="nav-item"><Link class="nav-link" to="/payments">Payments</Link></li>
                 <li class="nav-item"><Link class="nav-link" to="/" onClick={logoutUser}>Logout</Link></li>
             </>
         )

@@ -4,6 +4,7 @@ import TravelAPI from './api/TravelsAPI'
 import CustomerAPI from './api/CustomerAPI'
 import StationAPI from './api/StationAPI'
 import TrainAPI from './api/TrainAPI'
+import PaymentAPI from './api/PaymentAPI'
 import axios from 'axios'
 
 export const GlobalState = createContext()
@@ -36,7 +37,8 @@ export const DataProvider = ({children}) =>{
         travelAPI : TravelAPI(token),
         customerAPI : CustomerAPI(),
         stationAPI : StationAPI(),
-        trainAPI : TrainAPI()
+        trainAPI : TrainAPI(),
+        paymentAPI : PaymentAPI()
     }
 
     return (

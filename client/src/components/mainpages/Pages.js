@@ -16,6 +16,8 @@ import Trains from '../mainpages/trains/Trains'
 import CreateTrain from '../mainpages/trains/CreateTrain'
 import Stations from '../mainpages/stations/Stations'
 import CreateStation from '../mainpages/stations/CreateStation'
+import Payments from '../mainpages/Payment/Payments'
+import CreatePayment from '../mainpages/Payment/CreatePayment'
 
 function Pages() {
     const state = useContext(GlobalState)
@@ -43,6 +45,9 @@ function Pages() {
             <Route path="/stations" exact component={isAdmin ? Stations : NotFound} />
             <Route path="/createStation" exact component={isAdmin ? CreateStation : NotFound} />
             <Route path="/createStation/:Id" exact component={isAdmin ? CreateStation : NotFound} />
+            <Route path="/payments" exact component={isLogged ? Payments : NotFound} />
+            <Route path="/createPayment" exact component={isAdmin ? CreatePayment : NotFound} />
+            <Route path="/createPayment/:Id" exact component={isAdmin ? CreatePayment : NotFound} />
             {/* <Route path="/ProductsAll" exact component={ProductsAll} />
             <Route path="/detail/:id" exact component={DetailProduct} />
             <Route path="/category/:id" exact component={Category} />
