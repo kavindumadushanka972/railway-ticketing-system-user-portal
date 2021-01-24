@@ -46,9 +46,10 @@ function Stations() {
     if(loading) return <div><Loading /></div>
     return (
         <div>
+        <div className="container-fluid">
             <Filter /> 
-
-            <table class="table table-bordered table-hover container">
+        <div className="table-responsive">
+            <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
                 <thead className="thead-dark">
                     <tr>
                     <th scope="col">Id</th>
@@ -73,6 +74,9 @@ function Stations() {
                     
                 </tbody>
             </table>
+        </div>
+            
+        </div>
             {stations.length === 0 && <Loading />}
             {stations.length !== 0 && <Footer />}
         </div>

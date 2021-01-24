@@ -51,7 +51,7 @@ function User() {
             
             {users !== '' &&
             <table class="table table-hover container mt-5">
-                <thead>
+                <thead className="thead-dark">
                     <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Created Date</th>

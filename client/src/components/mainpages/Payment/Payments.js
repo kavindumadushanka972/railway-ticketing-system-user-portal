@@ -79,7 +79,7 @@ function Payments() {
             {payment !== '' &&
             
             <table class="table table-hover container mt-5">
-                <thead>
+                <thead className="thead-dark">
                     <tr>
                     <th scope="col">First Class</th>
                     <th scope="col">Second Class</th>

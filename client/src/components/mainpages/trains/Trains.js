@@ -48,8 +48,8 @@ function Trains() {
     return (
         <div>
             <Filter />
-
-            <table class="table table-bordered table-hover container">
+            <div className="container table-responsive">
+            <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
                 <thead className="thead-dark">
                     <tr>
                     <th scope="col">Id</th>
@@ -74,6 +74,7 @@ function Trains() {
                     
                 </tbody>
             </table>
+            </div>
             {trains.length === 0 && <Loading />}
             {trains.length !== 0 && <Footer />}
         </div>
