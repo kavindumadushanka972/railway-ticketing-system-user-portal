@@ -51,7 +51,7 @@ function User() {
             
             {users !== '' &&
             <div className="table-responsive">
-            <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+            <table class="table table-bordered table-striped table-responsive-stack mt-5" id="tableOne">
                 <thead className="thead-dark">
                     <tr>
                     <th scope="col">Id</th>
