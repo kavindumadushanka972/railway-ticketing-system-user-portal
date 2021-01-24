@@ -37,7 +37,7 @@ function Travels() {
     return (
         <div className="mr-auto ml-auto">
             <Filters />
-            <table class="table table-hover container">
+            <table class="table table-hover container ml-auto mr-auto">
                 <thead>
                     <tr>
                     <th scope="col">Start</th>
@@ -51,7 +51,7 @@ function Travels() {
                 <tbody>
                     {
                         travels.map(travel => (
-                            <tr class="table-primary">
+                            <tr class="table-primary container">
                                 <td>{travel.S_StationName.toUpperCase()}</td>
                                 <td>{travel.E_StationName.toUpperCase()}</td>
                                 <td>{travel.Train.toUpperCase()}</td>
