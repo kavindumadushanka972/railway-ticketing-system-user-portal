@@ -36,7 +36,8 @@ function Travels() {
     
     if(loading) return <div><Loading /></div>
     return (
-        <div className="col-lg-12">
+        <>
+        <div className="container-fluid">
             <Filters />
             <div className="table-responsive">
             <table  class="table table-bordered table-striped table-responsive-stack" id="tableOne">
@@ -70,11 +71,14 @@ function Travels() {
             </table>
             </div>
             <LoadMore />
-            {travels.length === 0 && <Loading />}
-            {travels.length !== 0 && <Footer />}
+            
             
         </div>
-    
+        <div>
+            {travels.length === 0 && <Loading />}
+            {travels.length !== 0 && <Footer />}
+        </div>
+        </>
         
     )
 }
