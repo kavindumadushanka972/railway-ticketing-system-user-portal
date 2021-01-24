@@ -9,7 +9,7 @@ function Filter() {
     const state = useContext(GlobalState)
     const [sort, setSort] = state.trainAPI.sort
     const [Id, setId] = state.trainAPI.Id
-    const [name, setName] = state.trainAPI.Id
+    const [name, setName] = state.trainAPI.name
 
     return (
         <div>
