@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 function CustomerAPI() {
     const [customers, setCustomers] = useState([])
-    const [callback, setCallback] = useState([])
+    const [callback, setCallback] = useState(false)
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
     const [result, setResult] = useState(0)

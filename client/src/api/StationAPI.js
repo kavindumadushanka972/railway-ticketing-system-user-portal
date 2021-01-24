@@ -4,6 +4,7 @@ import axios from 'axios'
 
 function StationAPI() {
     const [stations, SetStations] = useState([])
+    const [callback, setCallback] = useState(false)
 
     useEffect(() =>{
         const getStation = async () =>{
@@ -15,7 +16,7 @@ function StationAPI() {
             }
         }
         getStation()
-    })
+    },[callback])
 
 
     return {
