@@ -53,7 +53,7 @@ function Main() {
             
             <Filter />
             <table class="table table-hover container">
-                <thead>
+                <thead className="thead-dark">
                     <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>

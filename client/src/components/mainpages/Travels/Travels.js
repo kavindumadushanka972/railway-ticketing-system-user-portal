@@ -6,6 +6,7 @@ import LoadMore from '../Travels/LoadMore'
 import axios from 'axios'
 import Footer from '../../footers/Footer'
 
+
 function Travels() {
     const state = useContext(GlobalState)
     const [travels, setTravels] = useState([])
@@ -35,10 +36,11 @@ function Travels() {
     
     if(loading) return <div><Loading /></div>
     return (
-        <div className="mr-auto ml-auto">
+        <div className="col-lg-12">
             <Filters />
-            <table class="table table-hover container ml-auto mr-auto">
-                <thead>
+            <div className="table-responsive">
+            <table  class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+                <thead className="thead-dark">
                     <tr>
                     <th scope="col">Start</th>
                     <th scope="col">End</th>
@@ -66,6 +68,7 @@ function Travels() {
                     
                 </tbody>
             </table>
+            </div>
             <LoadMore />
             {travels.length === 0 && <Loading />}
             {travels.length !== 0 && <Footer />}

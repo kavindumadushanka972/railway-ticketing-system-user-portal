@@ -48,8 +48,8 @@ function Stations() {
         <div>
             <Filter /> 
 
-            <table class="table table-hover container">
-                <thead>
+            <table class="table table-bordered table-hover container">
+                <thead className="thead-dark">
                     <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
