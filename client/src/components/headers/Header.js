@@ -26,6 +26,7 @@ function Header() {
                 <li class="nav-item"><Link class="nav-link" to="/user">App User</Link></li>
                 <li class="nav-item"><Link class="nav-link" to="/uncomTravel">Freezed Account</Link></li>
                 <li class="nav-item"><Link class="nav-link" to="/trains">Trains</Link></li>
+                <li class="nav-item"><Link class="nav-link" to="/stations">Stations</Link></li>
             </>
         )
     }

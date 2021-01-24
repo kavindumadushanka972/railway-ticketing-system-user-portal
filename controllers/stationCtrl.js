@@ -74,7 +74,7 @@ const stationCtrl = {
     },
     updateStation: async (req, res) => {
         try {
-            await Station.findByIdAndUpdate({Id: req.params.Id}, {name: req.body.name})
+            await Station.findOneAndUpdate({Id: req.params.Id}, {name: req.body.name})
             res.json({msg: "Updated the station"})
         } catch (err) {
             return res.status(500).json({msg: err.message}) 

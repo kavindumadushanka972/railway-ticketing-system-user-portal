@@ -39,6 +39,7 @@ function Customer() {
                 console.log(res.data)
             }
             getCustomer()
+            setCallback(false)
         }else{
             setOnEdit(false)
             setCustomer(initialState)

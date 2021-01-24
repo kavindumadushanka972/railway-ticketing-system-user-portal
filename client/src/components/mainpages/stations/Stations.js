@@ -6,35 +6,33 @@ import axios from 'axios'
 import Footer from '../../footers/Footer'
 import {Link} from 'react-router-dom'
 
-
-function Trains() {
+function Stations() {
 
     const state = useContext(GlobalState)
-    const [trains, setTrains] = state.trainAPI.trains
+    const [stations, setStations] = state.stationAPI.stations
     const [token] = state.token
-    const [callback, setCallback] = state.trainAPI.callback
+    const [callback, setCallback] = state.stationAPI.callback
     const [loading, setLoading] = useState(false)
-    const [sort, setSort] = state.trainAPI.sort
-    const [Id, setId] = state.trainAPI.Id
-    const [name, setName] = state.trainAPI.name
+    const [sort, setSort] = state.stationAPI.sort
+    const [Id, setId] = state.stationAPI.Id
+    const [name, setName] = state.stationAPI.name
 
-    useEffect(() => {
-        const getTrains = async () =>{
-            
-            const res = await axios.get(`/api/trains?Id[regex]=${Id}&name[regex]=${name}&${sort}`)
-            setTrains(res.data.trains)
-            console.log(res.data.trains)
-            
+    useEffect(() =>{
+        const getStations = async () =>{
+
+            const res = await axios.get(`/api/stations?Id[regex]=${Id}&name[regex]=${name}&${sort}`)
+            setStations(res.data.stations)
+            console.log(res.data.stations)
         }
-        getTrains()
+        getStations()
         setCallback(false)
     },[callback, sort, Id, name])
 
-    const deleteTrain = async (id) => {
+    const deleteStation = async (id) =>{
         try {
             const confirm = window.confirm("Are you sure?")
             if(confirm){
-                const res = await axios.delete(`/api/trains/${id}`,{
+                const res = await axios.delete(`/api/stations/${id}`,{
                     headers: {Authorization: token}
                 })
                 alert(res.data.msg)
@@ -44,10 +42,11 @@ function Trains() {
             alert(err.response.data.msg)
         }
     }
+
     if(loading) return <div><Loading /></div>
     return (
         <div>
-            <Filter />
+            <Filter /> 
 
             <table class="table table-hover container">
                 <thead>
@@ -60,12 +59,12 @@ function Trains() {
                 </thead>
                 <tbody>
                     {
-                        trains.map(train => (
+                        stations.map(station => (
                             <tr class="table-primary">
-                                <td>{train.Id}</td>
-                                <td>{train.name.toUpperCase()}</td>
-                                <td><Link type="button" class="btn btn-outline-success" to={`/createTrain/${train.Id}`}>Update</Link></td>
-                                <td><Link type="button" class="btn btn-outline-danger" onClick={() => deleteTrain(train.Id)}>Delete</Link></td>
+                                <td>{station.Id}</td>
+                                <td>{station.name.toUpperCase()}</td>
+                                <td><Link type="button" class="btn btn-outline-success" to={`/createStation/${station.Id}`}>Update</Link></td>
+                                <td><Link type="button" class="btn btn-outline-danger" onClick={() => deleteStation(station.Id)}>Delete</Link></td>
                             </tr>
                         ))
                     }
@@ -74,11 +73,10 @@ function Trains() {
                     
                 </tbody>
             </table>
-            {trains.length === 0 && <Loading />}
-            {trains.length !== 0 && <Footer />}
+            {stations.length === 0 && <Loading />}
+            {stations.length !== 0 && <Footer />}
         </div>
     )
 }
 
-export default Trains
-
+export default Stations

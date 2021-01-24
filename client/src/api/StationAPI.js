@@ -5,6 +5,11 @@ import axios from 'axios'
 function StationAPI() {
     const [stations, SetStations] = useState([])
     const [callback, setCallback] = useState(false)
+    const [sort, setSort] = useState('')
+    const [page, setPage] = useState(1)
+    const [result, setResult] = useState(0)
+    const [Id, setId] = useState('')
+    const [name, setName] = useState('')
 
     useEffect(() =>{
         const getStation = async () =>{
@@ -20,7 +25,13 @@ function StationAPI() {
 
 
     return {
-        stations: [stations, SetStations]
+        stations: [stations, SetStations],
+        callback: [callback, setCallback],
+        sort: [sort, setSort],
+        page: [page, setPage],
+        result: [result, setResult],
+        Id: [Id, setId],
+        name: [name, setName]
     }
 }
 

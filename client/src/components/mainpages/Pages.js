@@ -14,6 +14,8 @@ import Uncom from '../mainpages/uncomTravel/UncomTravel'
 import Freezed from '../mainpages/uncomTravel/FreezedAccount'
 import Trains from '../mainpages/trains/Trains'
 import CreateTrain from '../mainpages/trains/CreateTrain'
+import Stations from '../mainpages/stations/Stations'
+import CreateStation from '../mainpages/stations/CreateStation'
 
 function Pages() {
     const state = useContext(GlobalState)
@@ -38,6 +40,9 @@ function Pages() {
             <Route path="/trains" exact component={isAdmin ? Trains : NotFound} />
             <Route path="/createTrain" exact component={isAdmin ? CreateTrain : NotFound} />
             <Route path="/createTrain/:Id" exact component={isAdmin ? CreateTrain : NotFound} />
+            <Route path="/stations" exact component={isAdmin ? Stations : NotFound} />
+            <Route path="/createStation" exact component={isAdmin ? CreateStation : NotFound} />
+            <Route path="/createStation/:Id" exact component={isAdmin ? CreateStation : NotFound} />
             {/* <Route path="/ProductsAll" exact component={ProductsAll} />
             <Route path="/detail/:id" exact component={DetailProduct} />
             <Route path="/category/:id" exact component={Category} />
