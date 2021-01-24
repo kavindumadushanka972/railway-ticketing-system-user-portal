@@ -9,7 +9,7 @@ function StationAPI() {
         const getStation = async () =>{
             try {
                 const res = await axios.get('/api/stations')
-                SetStations(res.data)
+                SetStations(res.data.stations)
             } catch (err) {
                 alert(err.response.data.msg)
             }
