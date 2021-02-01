@@ -136,7 +136,7 @@ function CreatePayment() {
                         }
 
                 </select>
-                <input type="text" name="UserId" id="UserId" required class="form-control col-md-4"
+                <input type="text" name="UserId" id="UserId" class="form-control col-md-4"
                 value={stationId} />
             </div>
                 
