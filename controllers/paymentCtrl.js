@@ -24,7 +24,7 @@ const paymentCtrl = {
                 Id = s2+s1
             }
             console.log(Id)
-            const respons = Station.findOne({Id: Id})
+            const respons = Payment.findOne({Id: Id})
             if(respons) return res.status(400).json({msg: "Payment method available for this Id"})
             
             const newPayment = new Payment({
