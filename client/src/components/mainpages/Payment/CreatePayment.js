@@ -147,7 +147,7 @@ function CreatePayment() {
                 </div>
 
                 <div className="form-group row justify-content-center align-items-center mr-auto ml-auto">
-                    <label htmlFor="s2" class="col-md-2 col-form-label">From</label>
+                    <label htmlFor="s2" class="col-md-2 col-form-label">To</label>
                     <input type="text" name="s2" id="s2" required class="col-md-4"
                     onChange={handleChangeInputData} />
                 </div>
