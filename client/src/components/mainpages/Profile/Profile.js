@@ -58,7 +58,7 @@ function Profile() {
             headers: {Authorization: Token}
         })
         alert("Recharge Successfully")
-        window.location.href = "/profile";
+        window.location.reload();
     
     }
 
