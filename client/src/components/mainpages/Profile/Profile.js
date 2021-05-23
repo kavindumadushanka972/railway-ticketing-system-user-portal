@@ -37,7 +37,7 @@ function Profile() {
                 headers: {Authorization: Token}
             })
             alert("Changed password")
-            window.location.href = "/profile";
+            window.location.href = "/";
         } catch (err) {
             alert(err.response.data.msg)
         }
@@ -58,8 +58,7 @@ function Profile() {
             headers: {Authorization: Token}
         })
         alert("Recharge Successfully")
-        window.location.reload();
-    
+        window.location.href = "/";
     }
 
     if(loading) return <div><Loading /></div>
