@@ -110,7 +110,8 @@ const uncomTravelCtrl = {
             balance = balance - cost
             await Customer.findOneAndUpdate({Id: customer.Id}, {balance: balance})
             
-            res.json({msg : "successfull"})
+            // res.json({msg : "successfull"})
+            res.json({msg: "Travel created successfully"})
 
         } catch (err) {
             return res.status(500).json({msg: err.message})
